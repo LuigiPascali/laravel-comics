@@ -1,11 +1,136 @@
 @import "~bootstrap/scss/bootstrap";
 
-body {
-    background-color: lightcoral;
+body{
+    background-color: lightblue;
 }
 
-.gatto {
-    width: 300px;
+//header
+header{
+    height: 70px;
+    margin-bottom: 0;
+
+    .navbar-expand-lg{
+        justify-content: flex-end;
+
+        .container-fluid{
+            .navbar-brand{
+
+                width: 50px;
+                height: 50px;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+.jumbotron{
     height: 300px;
-    background-image: url('../img/gatto.jpg');
+    background-image: url(../img/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-top: 0;
+}
+
+.jumbotron2{
+    height: 300px;
+    background-image: url('https://www.luig.it/wp-content/uploads/2018/09/iStock-639346548-mini2-650x320.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 0;
+}
+
+.form{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+//main
+main{
+    section{
+        .card-container{
+        
+            width: calc(100% / 3);
+        
+            .card{
+                min-height: 400px;
+        
+                .overlay{
+                    display: none;
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    height: 200px;
+                    overflow-y: auto;
+                    color: white;
+                    padding: 10px;
+                }
+        
+                .img-box{
+                    height: 200px;
+                    position: relative;
+        
+                    .price-ticket{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        background-color: chartreuse;
+                    }
+        
+                    .card-img-top{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+        
+                .img-box:hover .overlay{
+                    display: block;
+                }
+            }
+        
+        }
+    }
+}
+
+footer{
+    height: 70px;
+    background-color: white;
+    color: blue;
+}
+
+
+
+
+
+// Medium devices (tablets)
+@media (min-width: 768px) { 
+    main{
+        section{
+            .card-container{
+            
+                width: calc(100% / 4);
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) { 
+    main{
+        section{
+            .card-container{
+            
+                width: calc(100% / 5);
+            }
+        }
+    }
 }
